@@ -1,5 +1,5 @@
 #!/bin/bash
-
+### Config ###
 #SERVERNAME-Example: Loretta
 SERVERNAME=
 
@@ -25,6 +25,8 @@ STAKING=0
 MASTERNODE=0
 MASTERNODEPRIVKEY=0
 
+### Script ###
+[ `whoami` = root ] || exec sudo su -c $0 root
 
 echo ${INITIAL} | sudo -E tee /var/ALQO/_initial >/dev/null 2>&1
 chmod -f 777 /var/ALQO/_initial
